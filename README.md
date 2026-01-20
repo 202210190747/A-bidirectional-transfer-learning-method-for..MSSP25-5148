@@ -88,7 +88,7 @@ def merge_source_datasets(source_keys):
     return merged_X, merged_y
 
 def split_target_data(X_target, y_target):
-    """目标域划分：测试集（每隔5选1）+ 微调集（剩余每隔8选1）"""
+
     total_indices = np.arange(len(X_target))
     
     # 测试集（~20%）
