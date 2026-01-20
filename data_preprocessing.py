@@ -76,7 +76,9 @@ def split_data(data, train_ratio=0.7, val_ratio=0.15, test_ratio=0.15):
     Returns:
         tuple: (train_data, val_data, test_data)
     """
-    assert abs(train_ratio + val_ratio + test_ratio - 1.0) < 1e-6, \
+    # Tolerance for floating-point comparison to account for rounding errors
+    RATIO_TOLERANCE = 1e-6
+    assert abs(train_ratio + val_ratio + test_ratio - 1.0) < RATIO_TOLERANCE, \
         "Ratios must sum to 1.0"
     
     # TODO: Implement data splitting logic

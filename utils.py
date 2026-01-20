@@ -8,6 +8,7 @@ import os
 import json
 import time
 from datetime import datetime
+from functools import wraps
 
 
 def create_directory(dir_path):
@@ -77,6 +78,7 @@ def timer(func):
     Returns:
         wrapper: Wrapped function
     """
+    @wraps(func)
     def wrapper(*args, **kwargs):
         start_time = time.time()
         result = func(*args, **kwargs)
