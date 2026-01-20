@@ -1,4 +1,4 @@
-# A-bidirectional-transfer-learning-method-for..MSSP25-5148
+# A-bidirectional-transfer-learning-method-for..MSSP25-5148  （Further updates are still needed.）
 Includes the code, public datasets, and robot milling data
 
 import torch
